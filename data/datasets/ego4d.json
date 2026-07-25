@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "ego4d-v2",
+  "identity": {
+    "name": "Ego4D",
+    "version": "v2",
+    "release_date": null,
+    "canonical_url": "https://ego4d-data.org/",
+    "paper_url": "https://arxiv.org/abs/2110.07058",
+    "repository_url": "https://github.com/facebookresearch/Ego4d",
+    "aliases": ["Ego4D v2"],
+    "organizations": ["Ego4D Consortium", "Meta AI"],
+    "family_id": "ego4d"
+  },
+  "classification": {
+    "dataset_types": ["human_ego"],
+    "capture_agents": ["human"],
+    "viewpoints": ["head_mounted"],
+    "domains": ["daily activities"],
+    "intended_tasks": ["episodic memory", "forecasting", "hand-object interaction", "audio-visual learning"]
+  },
+  "access": {
+    "status": "gated_open",
+    "license": null,
+    "commercial_use": "unclear",
+    "download_url": "https://ego4d-data.org/docs/start-here/",
+    "terms_url": "https://ego4d-data.org/ego4d-license/",
+    "requires_application": true,
+    "last_checked_at": "2026-07-25",
+    "notes": "Provisional access summary. License terms require dedicated legal-field review.",
+    "source_ids": ["src-ego4d-site", "src-ego4d-license"]
+  },
+  "content": {
+    "modalities": [
+      { "name": "RGB video", "availability": "full", "format": null, "source_ids": ["src-ego4d-paper"] },
+      { "name": "audio", "availability": "partial", "format": null, "source_ids": ["src-ego4d-paper"] },
+      { "name": "eye gaze", "availability": "partial", "format": null, "source_ids": ["src-ego4d-paper"] }
+    ],
+    "annotations": [
+      { "name": "narrations", "availability": "partial", "format": null, "source_ids": ["src-ego4d-paper"] },
+      { "name": "benchmark annotations", "availability": "partial", "format": null, "source_ids": ["src-ego4d-site"] }
+    ],
+    "scale": {
+      "duration": { "value": 3670, "unit": "hours", "qualifier": "reported", "source_ids": ["src-ego4d-paper"] },
+      "participants": { "value": 931, "unit": "people", "qualifier": "reported", "source_ids": ["src-ego4d-paper"] }
+    },
+    "geographies": [],
+    "capture_devices": [],
+    "known_limitations": ["This pilot record is intentionally incomplete and has not undergone dual extraction."]
+  },
+  "provenance": [
+    {
+      "source_id": "src-ego4d-paper",
+      "source_type": "paper",
+      "title": "Ego4D: Around the World in 3,000 Hours of Egocentric Video",
+      "url": "https://arxiv.org/abs/2110.07058",
+      "retrieved_at": "2026-07-25",
+      "evidence_level": 1,
+      "archived_url": null,
+      "notes": null
+    },
+    {
+      "source_id": "src-ego4d-site",
+      "source_type": "official_website",
+      "title": "Ego4D",
+      "url": "https://ego4d-data.org/",
+      "retrieved_at": "2026-07-25",
+      "evidence_level": 1,
+      "archived_url": null,
+      "notes": null
+    },
+    {
+      "source_id": "src-ego4d-license",
+      "source_type": "license",
+      "title": "Ego4D License",
+      "url": "https://ego4d-data.org/ego4d-license/",
+      "retrieved_at": "2026-07-25",
+      "evidence_level": 1,
+      "archived_url": null,
+      "notes": null
+    }
+  ],
+  "curation": {
+    "status": "provisional",
+    "created_at": "2026-07-25",
+    "updated_at": "2026-07-25",
+    "last_verified_at": null,
+    "curators": ["Qiao SUN"],
+    "review_notes": "Schema example, not a completed ProjectEgo quality profile."
+  },
+  "quality_observations": []
+}

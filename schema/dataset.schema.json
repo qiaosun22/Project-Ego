@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qiaosun22.github.io/Project-Ego/schema/dataset.schema.json",
+  "title": "ProjectEgo Dataset Record",
+  "description": "Evidence-backed catalog record for one release of an egocentric dataset.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "identity",
+    "classification",
+    "access",
+    "content",
+    "provenance",
+    "curation"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "record_id": { "$ref": "#/$defs/slug" },
+    "identity": { "$ref": "#/$defs/identity" },
+    "classification": { "$ref": "#/$defs/classification" },
+    "access": { "$ref": "#/$defs/access" },
+    "content": { "$ref": "#/$defs/content" },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "curation": { "$ref": "#/$defs/curation" },
+    "quality_observations": {
+      "description": "Raw audit observations only. Normalized scores belong in separately versioned evaluation outputs.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/observation" },
+      "default": []
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "uri": { "type": "string", "format": "uri" },
+    "date": { "type": "string", "format": "date" },
+    "nullableString": { "type": ["string", "null"] },
+    "sourceRef": {
+      "type": "string",
+      "pattern": "^src-[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit", "source_ids"],
+      "properties": {
+        "value": { "type": ["number", "null"], "minimum": 0 },
+        "unit": { "type": "string", "minLength": 1 },
+        "qualifier": { "enum": ["exact", "approximately", "at_least", "at_most", "reported", "unknown"] },
+        "source_ids": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" }, "uniqueItems": true }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "release_date", "canonical_url", "aliases", "organizations"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/$defs/nullableString" },
+        "release_date": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+        "canonical_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "paper_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "repository_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "organizations": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "family_id": { "anyOf": [{ "$ref": "#/$defs/slug" }, { "type": "null" }] }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_types", "capture_agents", "viewpoints", "domains", "intended_tasks"],
+      "properties": {
+        "dataset_types": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": { "enum": ["human_ego", "robot_ego", "ego_exo", "synthetic_ego", "dataset_mixture"] }
+        },
+        "capture_agents": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": { "enum": ["human", "robot", "simulated_human", "simulated_robot", "other"] }
+        },
+        "viewpoints": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": { "enum": ["head_mounted", "chest_mounted", "wrist_mounted", "robot_head", "robot_wrist", "robot_body", "approximate_ego", "exo_paired", "other"] }
+        },
+        "domains": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "intended_tasks": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "license", "commercial_use", "download_url", "terms_url", "last_checked_at"],
+      "properties": {
+        "status": { "enum": ["open", "gated_open", "restricted", "proprietary", "unavailable", "unknown"] },
+        "license": { "$ref": "#/$defs/nullableString" },
+        "commercial_use": { "enum": ["permitted", "prohibited", "conditional", "unclear", "unknown"] },
+        "download_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "terms_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "requires_application": { "type": ["boolean", "null"] },
+        "last_checked_at": { "$ref": "#/$defs/date" },
+        "notes": { "$ref": "#/$defs/nullableString" },
+        "source_ids": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" }, "uniqueItems": true }
+      }
+    },
+    "modality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "availability", "source_ids"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "availability": { "enum": ["full", "partial", "derived", "reported", "unknown"] },
+        "format": { "$ref": "#/$defs/nullableString" },
+        "source_ids": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" }, "uniqueItems": true }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["modalities", "annotations", "scale", "geographies", "capture_devices"],
+      "properties": {
+        "modalities": { "type": "array", "items": { "$ref": "#/$defs/modality" } },
+        "annotations": { "type": "array", "items": { "$ref": "#/$defs/modality" } },
+        "scale": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration": { "$ref": "#/$defs/quantity" },
+            "episodes": { "$ref": "#/$defs/quantity" },
+            "trajectories": { "$ref": "#/$defs/quantity" },
+            "frames": { "$ref": "#/$defs/quantity" },
+            "participants": { "$ref": "#/$defs/quantity" },
+            "environments": { "$ref": "#/$defs/quantity" }
+          }
+        },
+        "geographies": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "capture_devices": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "known_limitations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "source_type", "title", "url", "retrieved_at", "evidence_level"],
+      "properties": {
+        "source_id": { "$ref": "#/$defs/sourceRef" },
+        "source_type": { "enum": ["paper", "official_website", "repository", "data_host", "license", "maintainer_statement", "projectego_audit", "secondary_source"] },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "$ref": "#/$defs/uri" },
+        "retrieved_at": { "$ref": "#/$defs/date" },
+        "evidence_level": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "archived_url": { "anyOf": [{ "$ref": "#/$defs/uri" }, { "type": "null" }] },
+        "notes": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "curation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "created_at", "updated_at", "last_verified_at", "curators"],
+      "properties": {
+        "status": { "enum": ["candidate", "provisional", "verified", "deprecated", "disputed"] },
+        "created_at": { "$ref": "#/$defs/date" },
+        "updated_at": { "$ref": "#/$defs/date" },
+        "last_verified_at": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+        "curators": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+        "review_notes": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric_id", "value", "evidence_level", "evaluator", "evaluated_at", "source_ids"],
+      "properties": {
+        "metric_id": { "$ref": "#/$defs/slug" },
+        "value": {},
+        "unit": { "$ref": "#/$defs/nullableString" },
+        "sample_size": { "type": ["integer", "null"], "minimum": 0 },
+        "evidence_level": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "evaluator": { "type": "string", "minLength": 1 },
+        "evaluated_at": { "$ref": "#/$defs/date" },
+        "source_ids": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" }, "uniqueItems": true },
+        "notes": { "$ref": "#/$defs/nullableString" }
+      }
+    }
+  }
+}
