@@ -81,6 +81,12 @@ ProjectEgo uses five evidence levels:
 
 This ladder prevents a common category error: a dataset can be well documented without being technically verified, and technically clean without being useful for a target policy.
 
+### 2.5 First reproducible catalog snapshot
+
+The first ProjectEgo discovery snapshot contains 109 candidate records imported, with attribution, from Open Data Eval and is supplemented by targeted searches of robot-learning ecosystems. Candidate status does not imply inclusion. From this pool and primary-source searches, we selected ten anchor releases spanning human ego, paired ego–exo, and robot ego regimes. Each anchor was checked against a primary paper and a second official or attributed source. The resulting [dataset master table](../data/catalog/dataset_master.csv) is evidence level 2 (`cross_checked_metadata`), not a file audit.
+
+This deliberately small cohort tests the schema and analysis pipeline before scaling curation. Figures 4–6 describe only these ten anchors and must not be interpreted as exhaustive historical estimates.
+
 ## 3. What Counts as Egocentric Data for Robot Learning?
 
 ### 3.1 Viewpoint is necessary but insufficient
@@ -186,6 +192,20 @@ The central opportunity is not to replace robot data with human video universall
 Recent work increasingly treats egocentric human behavior as policy data rather than only representation data. EgoZero extracts robot-executable information from smart-glasses demonstrations and reports zero-robot-data transfer on a set of manipulation tasks [12]. EgoVerse reports a standardized human demonstration platform and multi-lab transfer study at substantially larger scale [13]. Other emerging systems address wrist alignment, active perception, humanoid manipulation, and video-to-trajectory reconstruction [14–16].
 
 These results are promising but not directly comparable because capture devices, tasks, robot embodiments, policy architectures, data budgets, and success definitions differ. A utility benchmark must control these factors and reproduce results across datasets rather than aggregate headline success rates.
+
+### 5.5 Preliminary cross-checked anchor statistics
+
+![Publication timeline of the verified anchor cohort](figures/generated/anchor-release-timeline.svg)
+
+**Figure 4. Reference-publication timeline of the first cross-checked anchor cohort.** Counts use the year of each primary dataset paper, which is stored separately from release year. They reflect ten deliberately selected anchors, not the prevalence of dataset regimes in the full literature.
+
+![Modality coverage in the verified anchor cohort](figures/generated/anchor-modality-coverage.svg)
+
+**Figure 5. Reported modality coverage.** RGB is universal in this cohort, whereas robot state and action are confined to robot-native records. A reported modality can cover only part of a release; this chart does not encode completeness or file validity.
+
+![Scale comparison of anchor datasets with reported hours](figures/generated/anchor-scale-hours.svg)
+
+**Figure 6. Reported hours on a logarithmic scale.** Only records with reconciled hour values are shown. Ego-Exo4D reports combined synchronized multiview video rather than unique wall-clock activity; datasets described only in trajectories are omitted rather than converted using an assumed episode duration.
 
 ## 6. From Dataset Quality to Robot Utility
 

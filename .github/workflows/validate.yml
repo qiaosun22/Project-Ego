@@ -26,5 +26,9 @@ jobs:
           python-version: "3.12"
       - name: Validate JSON syntax and catalog invariants
         run: python scripts/validate_catalog.py
+      - name: Rebuild catalog tables and figures
+        run: python scripts/build_catalog_outputs.py
+      - name: Check generated outputs are current
+        run: git diff --exit-code
       - name: Compile validator
-        run: python -m py_compile scripts/validate_catalog.py
+        run: python -m py_compile scripts/validate_catalog.py scripts/build_catalog_outputs.py

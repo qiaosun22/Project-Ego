@@ -1,0 +1,26 @@
+{
+  "cohort_size": 10,
+  "verification_status": "cross_checked_metadata",
+  "evidence_level": 2,
+  "publication_year_min": 2022,
+  "publication_year_max": 2026,
+  "regime_counts": {
+    "ego_exo": 1,
+    "human_ego": 6,
+    "robot_ego": 3
+  },
+  "modality_counts": {
+    "audio": 3,
+    "body_pose": 2,
+    "calibration": 6,
+    "depth": 3,
+    "gaze": 3,
+    "hand_pose": 5,
+    "imu": 4,
+    "language": 8,
+    "rgb": 10,
+    "robot_action": 3,
+    "robot_state": 3
+  },
+  "records_with_hours": 8
+}

@@ -11,11 +11,14 @@ ProjectEgo is a living dataset observatory and reproducible benchmark for unders
 - [Survey working paper](docs/SURVEY.md) — narrative draft, taxonomy, benchmark design, and research figures.
 - [Dataset schema](schema/dataset.schema.json) — evidence-backed machine-readable record format.
 - [Example record](data/datasets/ego4d.json) — provisional schema example, not a completed scorecard.
+- [Dataset master table](data/catalog/dataset_master.csv) — generated table for the cross-checked anchor cohort.
+- [Discovery snapshot](data/discovery/README.md) — candidate sources, search families, and verification policy.
 
 Validate the catalog without external dependencies:
 
 ```bash
 python3 scripts/validate_catalog.py
+python3 scripts/build_catalog_outputs.py
 ```
 
 ## Website
