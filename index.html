@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProjectEgo is a living benchmark and dataset observatory for egocentric robot learning.">
+  <title>ProjectEgo | Egocentric Datasets for Robot Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ProjectEgo home">
+      <span class="brand-mark">PE</span>
+      <span>ProjectEgo</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#datasets">Datasets</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#survey">Survey</a>
+      <a class="nav-repo" href="https://github.com/qiaosun22/Project-Ego">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/images/robot-learning-hero.webp" alt="Robot arms performing a manipulation task in a laboratory">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="live-dot"></span> Living dataset observatory</p>
+        <h1 id="hero-title">ProjectEgo</h1>
+        <p class="hero-lede">The Awesome Ego-centric Datasets for Robot Learning</p>
+        <p class="hero-copy">A continuously updated catalog and reproducible benchmark for understanding which first-person datasets actually help robots learn.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#datasets">Explore datasets <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="#benchmark">View methodology</a>
+        </div>
+      </div>
+      <p class="image-credit">Research visual · Qiao Sun</p>
+    </section>
+
+    <section class="status-band" aria-label="Project status">
+      <div><strong>128</strong><span>datasets tracked</span></div>
+      <div><strong>36</strong><span>quality profiles</span></div>
+      <div><strong>14</strong><span>evaluation signals</span></div>
+      <div><strong>Weekly</strong><span>catalog refresh</span></div>
+      <p>Preview metrics · final benchmark values pending verification</p>
+    </section>
+
+    <section class="section datasets-section" id="datasets">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Dataset radar</p>
+          <h2>Find data that fits the task.</h2>
+        </div>
+        <p>Compare access, evidence and robot-learning utility across human and robot egocentric data. Every score links back to its source.</p>
+      </div>
+
+      <div class="catalog-toolbar">
+        <label class="search-field">
+          <span class="sr-only">Search datasets</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="dataset-search" type="search" placeholder="Search dataset or modality">
+        </label>
+        <div class="filter-group" aria-label="Dataset type filters">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="human">Human ego</button>
+          <button class="filter" type="button" data-filter="robot">Robot ego</button>
+          <button class="filter" type="button" data-filter="paired">Ego–exo</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Type</th>
+              <th>Scale</th>
+              <th>Modalities</th>
+              <th>Access</th>
+              <th>Evidence</th>
+              <th>Robot fit</th>
+            </tr>
+          </thead>
+          <tbody id="dataset-rows"></tbody>
+        </table>
+        <div class="empty-state" id="empty-state" hidden>No matching datasets.</div>
+      </div>
+      <div class="catalog-footer">
+        <span><span class="verified-dot"></span> Verified = files inspected by ProjectEgo</span>
+        <a href="https://github.com/qiaosun22/Project-Ego/issues">Submit a dataset <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="benchmark-section" id="benchmark">
+      <div class="section benchmark-inner">
+        <div class="section-heading benchmark-heading">
+          <div>
+            <p class="kicker light">ProjectEgo Standard</p>
+            <h2>Quality is multidimensional.</h2>
+          </div>
+          <p>We keep measured quality, evidence confidence and downstream utility separate. No opaque aggregate score.</p>
+        </div>
+
+        <div class="benchmark-grid">
+          <div class="dimension-list" role="tablist" aria-label="Benchmark dimensions">
+            <button class="dimension active" data-dimension="integrity" role="tab" aria-selected="true"><span>01</span> Data integrity</button>
+            <button class="dimension" data-dimension="perception" role="tab" aria-selected="false"><span>02</span> Perceptual quality</button>
+            <button class="dimension" data-dimension="semantics" role="tab" aria-selected="false"><span>03</span> Semantic quality</button>
+            <button class="dimension" data-dimension="diversity" role="tab" aria-selected="false"><span>04</span> Diversity & scale</button>
+            <button class="dimension" data-dimension="access" role="tab" aria-selected="false"><span>05</span> Access & governance</button>
+            <button class="dimension" data-dimension="utility" role="tab" aria-selected="false"><span>06</span> Robot utility</button>
+          </div>
+          <div class="dimension-detail" id="dimension-detail" role="tabpanel"></div>
+        </div>
+
+        <div class="evidence-row">
+          <span class="evidence-label">Evidence ladder</span>
+          <div><i>1</i><span>Claimed<br><small>paper / website</small></span></div>
+          <div><i>2</i><span>Metadata<br><small>schema checked</small></span></div>
+          <div><i>3</i><span>Sampled<br><small>files inspected</small></span></div>
+          <div><i>4</i><span>Verified<br><small>full audit</small></span></div>
+          <div><i>5</i><span>Validated<br><small>training run</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section survey-section" id="survey">
+      <div class="survey-copy">
+        <p class="kicker">Forthcoming survey</p>
+        <h2>From human egocentric video to robot learning.</h2>
+        <p>A systematic review of datasets, representations and transfer pathways connecting first-person human experience with general-purpose robot learning.</p>
+        <div class="survey-meta"><span>Living manuscript</span><span>Taxonomy</span><span>Benchmark findings</span></div>
+        <a class="text-link disabled" href="#survey" aria-disabled="true">Read the preview <span>Coming soon</span></a>
+      </div>
+      <div class="survey-figure" aria-label="Survey chapter preview">
+        <div class="paper-label">PROJECTEGO · SURVEY 2026</div>
+        <div class="paper-rule"></div>
+        <h3>From Human Egocentric Video<br>to Robot Learning</h3>
+        <p>A systematic dataset audit and utility benchmark</p>
+        <div class="paper-map">
+          <span>Human<br>experience</span><b>→</b><span>Representations<br>& alignment</span><b>→</b><span>Robot<br>behavior</span>
+        </div>
+        <div class="paper-lines"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">PE</span><span>ProjectEgo</span></div>
+    <p>An open, evidence-first benchmark for egocentric robot learning.</p>
+    <div><a href="https://github.com/qiaosun22/Project-Ego">GitHub</a><a href="mailto:qiaosun22@users.noreply.github.com">Contact</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
