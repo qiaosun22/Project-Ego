@@ -8,6 +8,7 @@ ProjectEgo is a living dataset observatory and reproducible benchmark for unders
 
 - [Roadmap](ROADMAP.md) — milestones, principles, workstreams, and release criteria.
 - [Systematic review protocol](docs/SURVEY_PROTOCOL.md) — scope, search, screening, extraction, and synthesis plan.
+- [Survey working paper](docs/SURVEY.md) — narrative draft, taxonomy, benchmark design, and research figures.
 - [Dataset schema](schema/dataset.schema.json) — evidence-backed machine-readable record format.
 - [Example record](data/datasets/ego4d.json) — provisional schema example, not a completed scorecard.
 

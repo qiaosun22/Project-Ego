@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">ProjectEgo scope from human experience to robot utility</title>
+  <desc id="desc">Five data regimes arranged from human egocentric observation through paired capture, robot-free demonstrations and robot trajectories to policy validation. Collection cost increases to the right while natural behavioral diversity generally decreases.</desc>
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#17201e;letter-spacing:0}.small{font-size:15px;fill:#5a6763}.label{font-size:16px;font-weight:700}.num{font-size:13px;font-weight:700;fill:#176b57}.axis{stroke:#9ba8a4;stroke-width:1.5}.guide{stroke:#dce3e0;stroke-width:1}.accent{fill:#dff25b}.green{fill:#176b57}.soft{fill:#edf3f0}.outline{fill:#fff;stroke:#b9c5c1;stroke-width:1.5}
+  </style>
+  <text x="54" y="52" font-size="24" font-weight="700">The egocentric data continuum</text>
+  <text x="54" y="80" class="small">Different regimes trade natural behavior and collection scale for action and embodiment alignment.</text>
+  <line x1="105" y1="225" x2="1095" y2="225" class="axis"/>
+  <path d="M1085 218 L1098 225 L1085 232" fill="none" class="axis"/>
+  <g transform="translate(70 130)">
+    <rect width="190" height="170" rx="4" class="outline"/>
+    <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">1</text>
+    <text x="20" y="67" class="label">Human ego</text><text x="20" y="90" class="label">observation</text>
+    <text x="20" y="122" class="small">Video · gaze · audio</text><text x="20" y="146" class="small">natural activity</text>
+  </g>
+  <g transform="translate(288 130)">
+    <rect width="190" height="170" rx="4" class="outline"/>
+    <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">2</text>
+    <text x="20" y="67" class="label">Paired ego–exo</text>
+    <text x="20" y="98" class="small">multiview · pose · 3D</text><text x="20" y="122" class="small">cross-view grounding</text>
+  </g>
+  <g transform="translate(506 130)">
+    <rect width="190" height="170" rx="4" class="outline"/>
+    <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">3</text>
+    <text x="20" y="67" class="label">Robot-free</text><text x="20" y="90" class="label">demonstration</text>
+    <text x="20" y="122" class="small">human motion · intent</text><text x="20" y="146" class="small">action recovery</text>
+  </g>
+  <g transform="translate(724 130)">
+    <rect width="190" height="170" rx="4" class="outline"/>
+    <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">4</text>
+    <text x="20" y="67" class="label">Robot ego</text><text x="20" y="90" class="label">trajectories</text>
+    <text x="20" y="122" class="small">state · action · vision</text><text x="20" y="146" class="small">executable behavior</text>
+  </g>
+  <g transform="translate(942 130)">
+    <rect width="190" height="170" rx="4" fill="#176b57"/>
+    <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">5</text>
+    <text x="20" y="67" font-size="16" font-weight="700" fill="#fff">Policy-level</text><text x="20" y="90" font-size="16" font-weight="700" fill="#fff">validation</text>
+    <text x="20" y="122" font-size="15" fill="#d9ebe5">closed-loop utility</text><text x="20" y="146" font-size="15" fill="#d9ebe5">transfer · efficiency</text>
+  </g>
+  <line x1="70" y1="356" x2="1132" y2="356" class="guide"/>
+  <text x="70" y="390" class="small">Natural behavior &amp; scalable collection</text><path d="M70 410 H420" class="axis"/><path d="M82 403 L69 410 L82 417" fill="none" class="axis"/>
+  <text x="1132" y="390" text-anchor="end" class="small">Action observability &amp; embodiment alignment</text><path d="M780 410 H1132" class="axis"/><path d="M1120 403 L1133 410 L1120 417" fill="none" class="axis"/>
+</svg>
