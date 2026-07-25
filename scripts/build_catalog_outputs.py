@@ -18,7 +18,8 @@ STATS = ROOT / "data" / "catalog" / "anchor_statistics.json"
 FIGURES = ROOT / "docs" / "figures" / "generated"
 MODALITIES = [
     "rgb", "audio", "depth", "gaze", "imu", "hand_pose", "body_pose",
-    "language", "calibration", "robot_state", "robot_action",
+    "language", "calibration", "point_cloud", "motion_capture", "force_torque",
+    "mmwave", "robot_state", "robot_action",
 ]
 
 
@@ -39,6 +40,11 @@ def load_verified() -> list[dict]:
             raise ValueError(f"{record['dataset_id']} lacks primary HTTPS source")
         if not record["secondary_source"].startswith("https://"):
             raise ValueError(f"{record['dataset_id']} lacks secondary HTTPS source")
+        if not isinstance(record.get("release_year"), int) or not isinstance(record.get("publication_year"), int):
+            raise ValueError(f"{record['dataset_id']} requires integer release and publication years")
+        unknown_modalities = set(record.get("modalities", [])) - set(MODALITIES)
+        if unknown_modalities:
+            raise ValueError(f"{record['dataset_id']} has unknown modalities: {sorted(unknown_modalities)}")
     return verified
 
 
@@ -52,7 +58,7 @@ def write_master(records: list[dict]) -> None:
         "last_checked", "notes",
     ]
     with MASTER.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for record in sorted(records, key=lambda r: (r["publication_year"], r["name"])):
             row = {key: record.get(key) for key in fields}
@@ -81,7 +87,7 @@ def write_trend(records: list[dict]) -> None:
     counts = {(year, regime): 0 for year in years for regime in regimes}
     for record in records:
         counts[(record["publication_year"], record["regime"])] += 1
-    lines = svg_start(width, height, "Publication timeline of the verified anchor cohort", "Reference-paper years for the first 10 cross-checked anchor datasets; this is not an exhaustive field trend.")
+    lines = svg_start(width, height, "Publication timeline of the verified anchor cohort", f"Reference-paper years for {len(records)} cross-checked anchor datasets; this is not an exhaustive field trend.")
     left, top, plot_w, plot_h = 90, 115, 930, 300
     max_count = max(counts.values())
     for value in range(max_count + 1):
@@ -110,10 +116,10 @@ def write_trend(records: list[dict]) -> None:
 
 
 def write_modalities(records: list[dict]) -> None:
-    width, height = 1120, 620
+    width, height = 1120, 130 + 40 * len(MODALITIES)
     counts = Counter(m for record in records for m in record["modalities"])
     ordered = sorted(MODALITIES, key=lambda m: (-counts[m], m))
-    lines = svg_start(width, height, "Modality coverage in the verified anchor cohort", "Percentage of 10 cross-checked datasets reporting each modality; availability and coverage depth are not implied.")
+    lines = svg_start(width, height, "Modality coverage in the verified anchor cohort", f"Percentage of {len(records)} cross-checked datasets reporting each modality; availability and coverage depth are not implied.")
     left, top, plot_w, row_h = 220, 105, 790, 40
     for idx, modality in enumerate(ordered):
         y = top + idx * row_h
@@ -122,17 +128,17 @@ def write_modalities(records: list[dict]) -> None:
             f'<text x="{left-18}" y="{y+20}" text-anchor="end" class="lab">{esc(modality.replace("_", " "))}</text>',
             f'<rect x="{left}" y="{y+7}" width="{plot_w}" height="18" fill="#edf1ef"/>',
             f'<rect x="{left}" y="{y+7}" width="{plot_w*pct/100:.1f}" height="18" class="human"/>',
-            f'<text x="{left+plot_w+14}" y="{y+21}" class="val">{counts[modality]}/10 · {pct:.0f}%</text>',
+            f'<text x="{left+plot_w+14}" y="{y+21}" class="val">{counts[modality]}/{len(records)} · {pct:.0f}%</text>',
         ]
     lines.append('</svg>')
     (FIGURES / "anchor-modality-coverage.svg").write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_scale(records: list[dict]) -> None:
-    width, height = 1120, 570
     available = sorted((r for r in records if r["hours"] is not None), key=lambda r: r["hours"])
+    width, height = 1120, 150 + 48 * len(available)
     max_log = math.log10(max(r["hours"] for r in available))
-    lines = svg_start(width, height, "Reported hours across comparable anchor records", "Logarithmic scale. Missing hours are omitted; Ego-Exo4D counts synchronized multi-view video and is not unique wall-clock time.")
+    lines = svg_start(width, height, "Reported hours across comparable anchor records", "Log scale; missing hours omitted. Ego-Exo4D reports synchronized multi-view hours.")
     left, top, plot_w, row_h = 230, 110, 790, 48
     for power in range(0, math.ceil(max_log) + 1):
         x = left + (power / max_log) * plot_w

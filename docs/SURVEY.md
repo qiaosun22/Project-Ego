@@ -83,9 +83,9 @@ This ladder prevents a common category error: a dataset can be well documented w
 
 ### 2.5 First reproducible catalog snapshot
 
-The first ProjectEgo discovery snapshot contains 109 candidate records imported, with attribution, from Open Data Eval and is supplemented by targeted searches of robot-learning ecosystems. Candidate status does not imply inclusion. From this pool and primary-source searches, we selected ten anchor releases spanning human ego, paired ego–exo, and robot ego regimes. Each anchor was checked against a primary paper and a second official or attributed source. The resulting [dataset master table](../data/catalog/dataset_master.csv) is evidence level 2 (`cross_checked_metadata`), not a file audit.
+The first ProjectEgo discovery snapshot contains 109 candidate records imported, with attribution, from Open Data Eval and is supplemented by targeted searches of robot-learning ecosystems. Candidate status does not imply inclusion. From this pool and primary-source searches, we selected 17 anchor releases spanning human ego, paired ego–exo, and robot ego regimes. Each anchor was checked against a primary paper and a second official or attributed source. The resulting [dataset master table](../data/catalog/dataset_master.csv) is evidence level 2 (`cross_checked_metadata`), not a file audit.
 
-This deliberately small cohort tests the schema and analysis pipeline before scaling curation. Figures 4–6 describe only these ten anchors and must not be interpreted as exhaustive historical estimates.
+This deliberately bounded cohort tests the schema and analysis pipeline before scaling curation. Figures 4–6 describe only these 17 anchors and must not be interpreted as exhaustive historical estimates.
 
 ## 3. What Counts as Egocentric Data for Robot Learning?
 
@@ -195,9 +195,11 @@ These results are promising but not directly comparable because capture devices,
 
 ### 5.5 Preliminary cross-checked anchor statistics
 
+The expanded cohort adds paired-view procedural and hand-object resources (H2O, Assembly101, ARCTIC, and TACO), long-duration wearable capture (Nymeria and EgoLife), and contact-rich robot demonstrations (RH20T) [17–23]. This broadens sensor and task coverage while retaining the same evidence threshold; it does not convert the cohort into a representative sample of the entire field.
+
 ![Publication timeline of the verified anchor cohort](figures/generated/anchor-release-timeline.svg)
 
-**Figure 4. Reference-publication timeline of the first cross-checked anchor cohort.** Counts use the year of each primary dataset paper, which is stored separately from release year. They reflect ten deliberately selected anchors, not the prevalence of dataset regimes in the full literature.
+**Figure 4. Reference-publication timeline of the cross-checked anchor cohort.** Counts use the year of each primary dataset paper, which is stored separately from release year. They reflect 17 deliberately selected anchors, not the prevalence of dataset regimes in the full literature.
 
 ![Modality coverage in the verified anchor cohort](figures/generated/anchor-modality-coverage.svg)
 
@@ -422,6 +424,20 @@ ProjectEgo reframes the field around evidence-backed dataset decisions. It separ
 [15] “EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration.” 2026. [arXiv:2602.10106](https://arxiv.org/abs/2602.10106).
 
 [16] “EgoEngine: From Egocentric Human Videos to High-Fidelity Dexterous Robot Demonstrations.” 2026. [arXiv:2606.12604](https://arxiv.org/abs/2606.12604).
+
+[17] T. Kwon et al. “H2O: Two Hands Manipulating Objects for First Person Interaction Recognition.” *ICCV*, 2021. [arXiv:2104.11181](https://arxiv.org/abs/2104.11181).
+
+[18] F. Sener et al. “Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities.” *CVPR*, 2022. [arXiv:2203.14712](https://arxiv.org/abs/2203.14712).
+
+[19] Z. Fan et al. “ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation.” *CVPR*, 2023. [arXiv:2204.13662](https://arxiv.org/abs/2204.13662).
+
+[20] Y. Liu et al. “TACO: Benchmarking Generalizable Bimanual Tool-Action-Object Understanding.” *CVPR*, 2024. [arXiv:2401.08399](https://arxiv.org/abs/2401.08399).
+
+[21] L. Ma et al. “Nymeria: A Massive Collection of Multimodal Egocentric Daily Motion in the Wild.” *ECCV*, 2024. [arXiv:2406.09905](https://arxiv.org/abs/2406.09905).
+
+[22] J. Yang et al. “EgoLife: Towards Egocentric Life Assistant.” 2025. [arXiv:2503.03803](https://arxiv.org/abs/2503.03803).
+
+[23] H. Fang et al. “RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot.” *ICRA*, 2024. [arXiv:2307.00595](https://arxiv.org/abs/2307.00595).
 
 ---
 
