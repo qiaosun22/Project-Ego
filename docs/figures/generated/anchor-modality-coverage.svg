@@ -1,68 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
 <title id="title">Modality coverage in the verified anchor cohort</title>
-<desc id="desc">Percentage of 17 cross-checked datasets reporting each modality; availability and coverage depth are not implied.</desc>
+<desc id="desc">Percentage of 20 cross-checked datasets reporting each modality; availability and coverage depth are not implied.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#18211f;letter-spacing:0}.title{font-size:22px;font-weight:700}.sub{font-size:13px;fill:#5d6965}.lab{font-size:12px;fill:#36413e}.val{font-size:11px;font-weight:700}.grid{stroke:#e2e7e5;stroke-width:1}.axis{stroke:#97a39f;stroke-width:1.2}.human{fill:#1b7f68}.paired{fill:#d8ea55}.robot{fill:#425b66}</style>
 <text x="56" y="44" class="title">Modality coverage in the verified anchor cohort</text>
-<text x="56" y="70" class="sub">Percentage of 17 cross-checked datasets reporting each modality; availability and coverage depth are not implied.</text>
+<text x="56" y="70" class="sub">Percentage of 20 cross-checked datasets reporting each modality; availability and coverage depth are not implied.</text>
 <text x="202" y="125" text-anchor="end" class="lab">rgb</text>
 <rect x="220" y="112" width="790" height="18" fill="#edf1ef"/>
 <rect x="220" y="112" width="790.0" height="18" class="human"/>
-<text x="1024" y="126" class="val">17/17 · 100%</text>
+<text x="1024" y="126" class="val">20/20 · 100%</text>
 <text x="202" y="165" text-anchor="end" class="lab">calibration</text>
 <rect x="220" y="152" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="152" width="604.1" height="18" class="human"/>
-<text x="1024" y="166" class="val">13/17 · 76%</text>
+<rect x="220" y="152" width="592.5" height="18" class="human"/>
+<text x="1024" y="166" class="val">15/20 · 75%</text>
 <text x="202" y="205" text-anchor="end" class="lab">language</text>
 <rect x="220" y="192" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="192" width="511.2" height="18" class="human"/>
-<text x="1024" y="206" class="val">11/17 · 65%</text>
+<rect x="220" y="192" width="474.0" height="18" class="human"/>
+<text x="1024" y="206" class="val">12/20 · 60%</text>
 <text x="202" y="245" text-anchor="end" class="lab">hand pose</text>
 <rect x="220" y="232" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="232" width="418.2" height="18" class="human"/>
-<text x="1024" y="246" class="val">9/17 · 53%</text>
+<rect x="220" y="232" width="395.0" height="18" class="human"/>
+<text x="1024" y="246" class="val">10/20 · 50%</text>
 <text x="202" y="285" text-anchor="end" class="lab">audio</text>
 <rect x="220" y="272" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="272" width="278.8" height="18" class="human"/>
-<text x="1024" y="286" class="val">6/17 · 35%</text>
+<rect x="220" y="272" width="276.5" height="18" class="human"/>
+<text x="1024" y="286" class="val">7/20 · 35%</text>
 <text x="202" y="325" text-anchor="end" class="lab">body pose</text>
 <rect x="220" y="312" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="312" width="278.8" height="18" class="human"/>
-<text x="1024" y="326" class="val">6/17 · 35%</text>
-<text x="202" y="365" text-anchor="end" class="lab">imu</text>
+<rect x="220" y="312" width="237.0" height="18" class="human"/>
+<text x="1024" y="326" class="val">6/20 · 30%</text>
+<text x="202" y="365" text-anchor="end" class="lab">gaze</text>
 <rect x="220" y="352" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="352" width="278.8" height="18" class="human"/>
-<text x="1024" y="366" class="val">6/17 · 35%</text>
-<text x="202" y="405" text-anchor="end" class="lab">gaze</text>
+<rect x="220" y="352" width="237.0" height="18" class="human"/>
+<text x="1024" y="366" class="val">6/20 · 30%</text>
+<text x="202" y="405" text-anchor="end" class="lab">imu</text>
 <rect x="220" y="392" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="392" width="232.4" height="18" class="human"/>
-<text x="1024" y="406" class="val">5/17 · 29%</text>
-<text x="202" y="445" text-anchor="end" class="lab">depth</text>
+<rect x="220" y="392" width="237.0" height="18" class="human"/>
+<text x="1024" y="406" class="val">6/20 · 30%</text>
+<text x="202" y="445" text-anchor="end" class="lab">robot action</text>
 <rect x="220" y="432" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="432" width="185.9" height="18" class="human"/>
-<text x="1024" y="446" class="val">4/17 · 24%</text>
-<text x="202" y="485" text-anchor="end" class="lab">robot action</text>
+<rect x="220" y="432" width="197.5" height="18" class="human"/>
+<text x="1024" y="446" class="val">5/20 · 25%</text>
+<text x="202" y="485" text-anchor="end" class="lab">robot state</text>
 <rect x="220" y="472" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="472" width="185.9" height="18" class="human"/>
-<text x="1024" y="486" class="val">4/17 · 24%</text>
-<text x="202" y="525" text-anchor="end" class="lab">robot state</text>
+<rect x="220" y="472" width="197.5" height="18" class="human"/>
+<text x="1024" y="486" class="val">5/20 · 25%</text>
+<text x="202" y="525" text-anchor="end" class="lab">depth</text>
 <rect x="220" y="512" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="512" width="185.9" height="18" class="human"/>
-<text x="1024" y="526" class="val">4/17 · 24%</text>
+<rect x="220" y="512" width="158.0" height="18" class="human"/>
+<text x="1024" y="526" class="val">4/20 · 20%</text>
 <text x="202" y="565" text-anchor="end" class="lab">motion capture</text>
 <rect x="220" y="552" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="552" width="139.4" height="18" class="human"/>
-<text x="1024" y="566" class="val">3/17 · 18%</text>
+<rect x="220" y="552" width="118.5" height="18" class="human"/>
+<text x="1024" y="566" class="val">3/20 · 15%</text>
 <text x="202" y="605" text-anchor="end" class="lab">point cloud</text>
 <rect x="220" y="592" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="592" width="92.9" height="18" class="human"/>
-<text x="1024" y="606" class="val">2/17 · 12%</text>
+<rect x="220" y="592" width="79.0" height="18" class="human"/>
+<text x="1024" y="606" class="val">2/20 · 10%</text>
 <text x="202" y="645" text-anchor="end" class="lab">force torque</text>
 <rect x="220" y="632" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="632" width="46.5" height="18" class="human"/>
-<text x="1024" y="646" class="val">1/17 · 6%</text>
+<rect x="220" y="632" width="39.5" height="18" class="human"/>
+<text x="1024" y="646" class="val">1/20 · 5%</text>
 <text x="202" y="685" text-anchor="end" class="lab">mmwave</text>
 <rect x="220" y="672" width="790" height="18" fill="#edf1ef"/>
-<rect x="220" y="672" width="46.5" height="18" class="human"/>
-<text x="1024" y="686" class="val">1/17 · 6%</text>
+<rect x="220" y="672" width="39.5" height="18" class="human"/>
+<text x="1024" y="686" class="val">1/20 · 5%</text>
 </svg>

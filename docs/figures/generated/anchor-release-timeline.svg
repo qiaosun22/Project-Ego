@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
 <title id="title">Publication timeline of the verified anchor cohort</title>
-<desc id="desc">Reference-paper years for 17 cross-checked anchor datasets; this is not an exhaustive field trend.</desc>
+<desc id="desc">Reference-paper years for 20 cross-checked anchor datasets; this is not an exhaustive field trend.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#18211f;letter-spacing:0}.title{font-size:22px;font-weight:700}.sub{font-size:13px;fill:#5d6965}.lab{font-size:12px;fill:#36413e}.val{font-size:11px;font-weight:700}.grid{stroke:#e2e7e5;stroke-width:1}.axis{stroke:#97a39f;stroke-width:1.2}.human{fill:#1b7f68}.paired{fill:#d8ea55}.robot{fill:#425b66}</style>
 <text x="56" y="44" class="title">Publication timeline of the verified anchor cohort</text>
-<text x="56" y="70" class="sub">Reference-paper years for 17 cross-checked anchor datasets; this is not an exhaustive field trend.</text>
+<text x="56" y="70" class="sub">Reference-paper years for 20 cross-checked anchor datasets; this is not an exhaustive field trend.</text>
 <line x1="90" y1="415.0" x2="1020" y2="415.0" class="grid"/>
 <text x="72" y="419.0" text-anchor="end" class="lab">0</text>
 <line x1="90" y1="315.0" x2="1020" y2="315.0" class="grid"/>
@@ -13,41 +13,84 @@
 <text x="72" y="219.0" text-anchor="end" class="lab">2</text>
 <line x1="90" y1="115.0" x2="1020" y2="115.0" class="grid"/>
 <text x="72" y="119.0" text-anchor="end" class="lab">3</text>
-<text x="167.5" y="443" text-anchor="middle" class="lab">2021</text>
-<rect x="120.5" y="415.0" width="28" height="0.0" class="human"/>
-<rect x="153.5" y="315.0" width="28" height="100.0" class="paired"/>
-<text x="167.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="186.5" y="415.0" width="28" height="0.0" class="robot"/>
-<text x="322.5" y="443" text-anchor="middle" class="lab">2022</text>
-<rect x="275.5" y="115.0" width="28" height="300.0" class="human"/>
-<text x="289.5" y="108.0" text-anchor="middle" class="val">3</text>
-<rect x="308.5" y="315.0" width="28" height="100.0" class="paired"/>
-<text x="322.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="341.5" y="415.0" width="28" height="0.0" class="robot"/>
-<text x="477.5" y="443" text-anchor="middle" class="lab">2023</text>
-<rect x="430.5" y="415.0" width="28" height="0.0" class="human"/>
-<rect x="463.5" y="315.0" width="28" height="100.0" class="paired"/>
-<text x="477.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="496.5" y="215.0" width="28" height="200.0" class="robot"/>
-<text x="510.5" y="208.0" text-anchor="middle" class="val">2</text>
-<text x="632.5" y="443" text-anchor="middle" class="lab">2024</text>
-<rect x="585.5" y="315.0" width="28" height="100.0" class="human"/>
-<text x="599.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="618.5" y="115.0" width="28" height="300.0" class="paired"/>
-<text x="632.5" y="108.0" text-anchor="middle" class="val">3</text>
-<rect x="651.5" y="215.0" width="28" height="200.0" class="robot"/>
-<text x="665.5" y="208.0" text-anchor="middle" class="val">2</text>
-<text x="787.5" y="443" text-anchor="middle" class="lab">2025</text>
-<rect x="740.5" y="315.0" width="28" height="100.0" class="human"/>
-<text x="754.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="773.5" y="315.0" width="28" height="100.0" class="paired"/>
-<text x="787.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="806.5" y="415.0" width="28" height="0.0" class="robot"/>
-<text x="942.5" y="443" text-anchor="middle" class="lab">2026</text>
-<rect x="895.5" y="315.0" width="28" height="100.0" class="human"/>
-<text x="909.5" y="308.0" text-anchor="middle" class="val">1</text>
-<rect x="928.5" y="415.0" width="28" height="0.0" class="paired"/>
-<rect x="961.5" y="415.0" width="28" height="0.0" class="robot"/>
+<text x="119.1" y="443" text-anchor="middle" class="lab">2011</text>
+<rect x="92.3" y="315.0" width="14.53125" height="100.0" class="human"/>
+<text x="99.5" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="111.8" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="131.3" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="177.2" y="443" text-anchor="middle" class="lab">2012</text>
+<rect x="150.4" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="169.9" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="189.5" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="235.3" y="443" text-anchor="middle" class="lab">2013</text>
+<rect x="208.5" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="228.0" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="247.6" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="293.4" y="443" text-anchor="middle" class="lab">2014</text>
+<rect x="266.6" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="286.2" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="305.7" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="351.6" y="443" text-anchor="middle" class="lab">2015</text>
+<rect x="324.8" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="344.3" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="363.8" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="409.7" y="443" text-anchor="middle" class="lab">2016</text>
+<rect x="382.9" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="402.4" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="422.0" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="467.8" y="443" text-anchor="middle" class="lab">2017</text>
+<rect x="441.0" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="460.5" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="480.1" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="525.9" y="443" text-anchor="middle" class="lab">2018</text>
+<rect x="499.1" y="315.0" width="14.53125" height="100.0" class="human"/>
+<text x="506.4" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="518.7" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="538.2" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="584.1" y="443" text-anchor="middle" class="lab">2019</text>
+<rect x="557.3" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="576.8" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="596.3" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="642.2" y="443" text-anchor="middle" class="lab">2020</text>
+<rect x="615.4" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="634.9" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="654.5" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="700.3" y="443" text-anchor="middle" class="lab">2021</text>
+<rect x="673.5" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="693.0" y="315.0" width="14.53125" height="100.0" class="paired"/>
+<text x="700.3" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="712.6" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="758.4" y="443" text-anchor="middle" class="lab">2022</text>
+<rect x="731.6" y="115.0" width="14.53125" height="300.0" class="human"/>
+<text x="738.9" y="108.0" text-anchor="middle" class="val">3</text>
+<rect x="751.2" y="315.0" width="14.53125" height="100.0" class="paired"/>
+<text x="758.4" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="770.7" y="415.0" width="14.53125" height="0.0" class="robot"/>
+<text x="816.6" y="443" text-anchor="middle" class="lab">2023</text>
+<rect x="789.8" y="415.0" width="14.53125" height="0.0" class="human"/>
+<rect x="809.3" y="315.0" width="14.53125" height="100.0" class="paired"/>
+<text x="816.6" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="828.8" y="215.0" width="14.53125" height="200.0" class="robot"/>
+<text x="836.1" y="208.0" text-anchor="middle" class="val">2</text>
+<text x="874.7" y="443" text-anchor="middle" class="lab">2024</text>
+<rect x="847.9" y="315.0" width="14.53125" height="100.0" class="human"/>
+<text x="855.2" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="867.4" y="115.0" width="14.53125" height="300.0" class="paired"/>
+<text x="874.7" y="108.0" text-anchor="middle" class="val">3</text>
+<rect x="887.0" y="215.0" width="14.53125" height="200.0" class="robot"/>
+<text x="894.2" y="208.0" text-anchor="middle" class="val">2</text>
+<text x="932.8" y="443" text-anchor="middle" class="lab">2025</text>
+<rect x="906.0" y="315.0" width="14.53125" height="100.0" class="human"/>
+<text x="913.3" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="925.5" y="315.0" width="14.53125" height="100.0" class="paired"/>
+<text x="932.8" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="945.1" y="315.0" width="14.53125" height="100.0" class="robot"/>
+<text x="952.3" y="308.0" text-anchor="middle" class="val">1</text>
+<text x="990.9" y="443" text-anchor="middle" class="lab">2026</text>
+<rect x="964.1" y="315.0" width="14.53125" height="100.0" class="human"/>
+<text x="971.4" y="308.0" text-anchor="middle" class="val">1</text>
+<rect x="983.7" y="415.0" width="14.53125" height="0.0" class="paired"/>
+<rect x="1003.2" y="415.0" width="14.53125" height="0.0" class="robot"/>
 <rect x="680" y="465" width="13" height="13" class="human"/>
 <text x="700" y="476" class="lab">Human ego</text>
 <rect x="810" y="465" width="13" height="13" class="paired"/>

@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="774" viewBox="0 0 1120 774" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="822" viewBox="0 0 1120 822" role="img" aria-labelledby="title desc">
 <title id="title">Reported hours across comparable anchor records</title>
 <desc id="desc">Log scale; missing hours omitted. Ego-Exo4D reports synchronized multi-view hours.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#18211f;letter-spacing:0}.title{font-size:22px;font-weight:700}.sub{font-size:13px;fill:#5d6965}.lab{font-size:12px;fill:#36413e}.val{font-size:11px;font-weight:700}.grid{stroke:#e2e7e5;stroke-width:1}.axis{stroke:#97a39f;stroke-width:1.2}.human{fill:#1b7f68}.paired{fill:#d8ea55}.robot{fill:#425b66}</style>
 <text x="56" y="44" class="title">Reported hours across comparable anchor records</text>
 <text x="56" y="70" class="sub">Log scale; missing hours omitted. Ego-Exo4D reports synchronized multi-view hours.</text>
-<line x1="230.0" y1="96" x2="230.0" y2="722" class="grid"/>
+<line x1="230.0" y1="96" x2="230.0" y2="770" class="grid"/>
 <text x="230.0" y="82" text-anchor="middle" class="lab">10^0 h</text>
-<line x1="451.6" y1="96" x2="451.6" y2="722" class="grid"/>
+<line x1="451.6" y1="96" x2="451.6" y2="770" class="grid"/>
 <text x="451.6" y="82" text-anchor="middle" class="lab">10^1 h</text>
-<line x1="673.2" y1="96" x2="673.2" y2="722" class="grid"/>
+<line x1="673.2" y1="96" x2="673.2" y2="770" class="grid"/>
 <text x="673.2" y="82" text-anchor="middle" class="lab">10^2 h</text>
-<line x1="894.9" y1="96" x2="894.9" y2="722" class="grid"/>
+<line x1="894.9" y1="96" x2="894.9" y2="770" class="grid"/>
 <text x="894.9" y="82" text-anchor="middle" class="lab">10^3 h</text>
-<line x1="1116.5" y1="96" x2="1116.5" y2="722" class="grid"/>
+<line x1="1116.5" y1="96" x2="1116.5" y2="770" class="grid"/>
 <text x="1116.5" y="82" text-anchor="middle" class="lab">10^4 h</text>
 <text x="212" y="128" text-anchor="end" class="lab">ARCTIC</text>
 <rect x="230" y="115" width="74.6" height="19" class="paired"/>
@@ -27,31 +27,34 @@
 <text x="212" y="272" text-anchor="end" class="lab">HOI4D</text>
 <rect x="230" y="259" width="298.4" height="19" class="human"/>
 <text x="538.4" y="273" class="val">22.2 h</text>
-<text x="212" y="320" text-anchor="end" class="lab">EPIC-KITCHENS-100</text>
-<rect x="230" y="307" width="443.2" height="19" class="human"/>
-<text x="683.2" y="321" class="val">100.0 h</text>
-<text x="212" y="368" text-anchor="end" class="lab">Nymeria</text>
-<rect x="230" y="355" width="549.0" height="19" class="paired"/>
-<text x="789.0" y="369" class="val">300.0 h</text>
-<text x="212" y="416" text-anchor="end" class="lab">EgoLife</text>
+<text x="212" y="320" text-anchor="end" class="lab">EGTEA Gaze+</text>
+<rect x="230" y="307" width="320.7" height="19" class="human"/>
+<text x="560.7" y="321" class="val">28.0 h</text>
+<text x="212" y="368" text-anchor="end" class="lab">EPIC-KITCHENS-100</text>
+<rect x="230" y="355" width="443.2" height="19" class="human"/>
+<text x="683.2" y="369" class="val">100.0 h</text>
+<text x="212" y="416" text-anchor="end" class="lab">Nymeria</text>
 <rect x="230" y="403" width="549.0" height="19" class="paired"/>
 <text x="789.0" y="417" class="val">300.0 h</text>
-<text x="212" y="464" text-anchor="end" class="lab">DROID</text>
-<rect x="230" y="451" width="563.8" height="19" class="robot"/>
-<text x="803.8" y="465" class="val">350.0 h</text>
-<text x="212" y="512" text-anchor="end" class="lab">Assembly101</text>
-<rect x="230" y="499" width="600.6" height="19" class="paired"/>
-<text x="840.6" y="513" class="val">513.0 h</text>
-<text x="212" y="560" text-anchor="end" class="lab">EgoDex</text>
-<rect x="230" y="547" width="646.8" height="19" class="human"/>
-<text x="886.8" y="561" class="val">829.0 h</text>
-<text x="212" y="608" text-anchor="end" class="lab">Ego-Exo4D</text>
-<rect x="230" y="595" width="689.1" height="19" class="paired"/>
-<text x="929.1" y="609" class="val">1,286.0 h</text>
-<text x="212" y="656" text-anchor="end" class="lab">EgoVerse</text>
-<rect x="230" y="643" width="694.6" height="19" class="human"/>
-<text x="934.6" y="657" class="val">1,362.0 h</text>
-<text x="212" y="704" text-anchor="end" class="lab">Ego4D</text>
-<rect x="230" y="691" width="790.0" height="19" class="human"/>
-<text x="1030.0" y="705" class="val">3,670.0 h</text>
+<text x="212" y="464" text-anchor="end" class="lab">EgoLife</text>
+<rect x="230" y="451" width="549.0" height="19" class="paired"/>
+<text x="789.0" y="465" class="val">300.0 h</text>
+<text x="212" y="512" text-anchor="end" class="lab">DROID</text>
+<rect x="230" y="499" width="563.8" height="19" class="robot"/>
+<text x="803.8" y="513" class="val">350.0 h</text>
+<text x="212" y="560" text-anchor="end" class="lab">Assembly101</text>
+<rect x="230" y="547" width="600.6" height="19" class="paired"/>
+<text x="840.6" y="561" class="val">513.0 h</text>
+<text x="212" y="608" text-anchor="end" class="lab">EgoDex</text>
+<rect x="230" y="595" width="646.8" height="19" class="human"/>
+<text x="886.8" y="609" class="val">829.0 h</text>
+<text x="212" y="656" text-anchor="end" class="lab">Ego-Exo4D</text>
+<rect x="230" y="643" width="689.1" height="19" class="paired"/>
+<text x="929.1" y="657" class="val">1,286.0 h</text>
+<text x="212" y="704" text-anchor="end" class="lab">EgoVerse</text>
+<rect x="230" y="691" width="694.6" height="19" class="human"/>
+<text x="934.6" y="705" class="val">1,362.0 h</text>
+<text x="212" y="752" text-anchor="end" class="lab">Ego4D</text>
+<rect x="230" y="739" width="790.0" height="19" class="human"/>
+<text x="1030.0" y="753" class="val">3,670.0 h</text>
 </svg>
