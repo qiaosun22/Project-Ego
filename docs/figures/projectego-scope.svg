@@ -3,7 +3,7 @@
   <desc id="desc">Five data regimes arranged from human egocentric observation through paired capture, robot-free demonstrations and robot trajectories to policy validation. Collection cost increases to the right while natural behavioral diversity generally decreases.</desc>
   <rect width="1200" height="480" fill="#ffffff"/>
   <style>
-    text{font-family:Arial,Helvetica,sans-serif;fill:#17201e;letter-spacing:0}.small{font-size:15px;fill:#5a6763}.label{font-size:16px;font-weight:700}.num{font-size:13px;font-weight:700;fill:#176b57}.axis{stroke:#9ba8a4;stroke-width:1.5}.guide{stroke:#dce3e0;stroke-width:1}.accent{fill:#dff25b}.green{fill:#176b57}.soft{fill:#edf3f0}.outline{fill:#fff;stroke:#b9c5c1;stroke-width:1.5}
+    text{font-family:Arial,Helvetica,sans-serif;fill:#17201e;letter-spacing:0}.small{font-size:15px;fill:#5a6763}.label{font-size:16px;font-weight:700}.inverse{fill:#fff}.inverse-small{font-size:15px;fill:#d9ebe5}.num{font-size:13px;font-weight:700;fill:#176b57}.axis{stroke:#9ba8a4;stroke-width:1.5}.guide{stroke:#dce3e0;stroke-width:1}.accent{fill:#dff25b}.green{fill:#176b57}.soft{fill:#edf3f0}.outline{fill:#fff;stroke:#b9c5c1;stroke-width:1.5}
   </style>
   <text x="54" y="52" font-size="24" font-weight="700">The egocentric data continuum</text>
   <text x="54" y="80" class="small">Different regimes trade natural behavior and collection scale for action and embodiment alignment.</text>
@@ -36,8 +36,8 @@
   <g transform="translate(942 130)">
     <rect width="190" height="170" rx="4" fill="#176b57"/>
     <circle cx="28" cy="27" r="14" class="accent"/><text x="28" y="32" text-anchor="middle" class="num">5</text>
-    <text x="20" y="67" font-size="16" font-weight="700" fill="#fff">Policy-level</text><text x="20" y="90" font-size="16" font-weight="700" fill="#fff">validation</text>
-    <text x="20" y="122" font-size="15" fill="#d9ebe5">closed-loop utility</text><text x="20" y="146" font-size="15" fill="#d9ebe5">transfer · efficiency</text>
+    <text x="20" y="67" class="label inverse">Policy-level</text><text x="20" y="90" class="label inverse">validation</text>
+    <text x="20" y="122" class="inverse-small">closed-loop utility</text><text x="20" y="146" class="inverse-small">transfer · efficiency</text>
   </g>
   <line x1="70" y1="356" x2="1132" y2="356" class="guide"/>
   <text x="70" y="390" class="small">Natural behavior &amp; scalable collection</text><path d="M70 410 H420" class="axis"/><path d="M82 403 L69 410 L82 417" fill="none" class="axis"/>
